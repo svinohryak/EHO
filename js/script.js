@@ -1,13 +1,13 @@
 const prevBtn = document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
 let i = 0;
-let images = document.querySelectorAll('.photo-gallery img');
+let images = document.querySelectorAll('.photo-gallery > img');
 
 function prevImg() {
     images[i].className = '';
     i--;
     if(i < 0) {
-        i = images.length -2;
+        i = images.length -1;
     }
     images[i].className = 'shown';
 }
@@ -15,24 +15,22 @@ function prevImg() {
 function nextImg() {
     images[i].className = '';
     i++;
-    if(i >= images.length - 2) {
+    if(i >= images.length) {
         i = 0;
     } 
     images[i].className = 'shown';
 }
 
-prevBtn.addEventListener('click', nextImg)
-nextBtn.addEventListener('click', nextImg)
-
-let changImgTimer = setInterval(timerBtn, 5000);
-function timerBtn() {
-  images[i].className = '';
-  i++; 
-  if (i >= images.length - 2) {
-    i = 0;
-  }
-  images[i].className = 'shown';
+if(prevBtn) {
+    prevBtn.addEventListener('click', prevImg);
 }
+if(nextBtn) {
+    nextBtn.addEventListener('click', nextImg);
+}
+
+// auto change gallery
+
+// let changImgTimer = setInterval(nextImg, 5000);
 
 // burger menu
 

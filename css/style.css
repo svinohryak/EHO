@@ -456,7 +456,7 @@ ul li:first-child a, ul li:last-child a {
 
 @media screen and (max-width: 750px) {
     .nav-ul li > a {
-        font-size: .9em;
+        font-size: 1em;
     }
     .row-icons {
         display: flex;
@@ -489,6 +489,9 @@ ul li:first-child a, ul li:last-child a {
     .row-icons {
         justify-content: center;
         flex-flow: row wrap;
+    }
+    .nav-ul li > a.current-page__text {
+        font-size: 1em;
     }
 }
 
@@ -625,6 +628,12 @@ ul li:first-child a, ul li:last-child a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+/* бургер меню текущая страница */
+   
+    .nav-ul li > a.current-page__text {
+        font-size: 1em;
     }
 
 }
