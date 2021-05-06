@@ -13,6 +13,12 @@
     <script src="js/script.js" defer></script>
     <title>EHO Comments</title>
 
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 7847492, onlyWidgets: true});
+</script>
+
 </head>
 <body">
     <div class="wrapper">
@@ -65,6 +71,11 @@
                 </div>
 
                 <div class="section comments">
+
+                    <div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 20, attach: false});
+</script>
                     
                 </div>
 
