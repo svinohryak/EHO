@@ -444,6 +444,10 @@ ul li:first-child a, ul li:last-child a {
         z-index: 40;
     }
 
+    .video {
+        margin-bottom: 3rem;
+    }
+
 }
 @media screen and (max-width: 860px) {
     .section__title--greeting p {
