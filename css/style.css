@@ -3,6 +3,7 @@ html {
 }
 body {
     overflow-x: hidden;
+    background-color: black;
 }
 .wrapper {
     display: flex;
@@ -433,6 +434,16 @@ ul li:first-child a, ul li:last-child a {
     .section__title {
         justify-content: space-around;
     }
+
+    .footer {
+        background-color: black;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 40;
+    }
+
 }
 @media screen and (max-width: 860px) {
     .section__title--greeting p {
