@@ -1,5 +1,5 @@
-const prevBtn = document.querySelector('#prev');
-const nextBtn = document.querySelector('#next');
+const myPrevBtn = document.querySelector('#prev');
+const myNextBtn = document.querySelector('#next');
 let i = 0;
 let images = document.querySelectorAll('.photo-gallery > img');
 
@@ -28,7 +28,7 @@ let images = document.querySelectorAll('.photo-gallery > img');
 //     nextBtn.addEventListener('click', nextImg);
 // }
 
-if(prevBtn && nextBtn) {
+if(myPrevBtn && myNextBtn) {
     function prevImg() {
         images[i].className = '';
         i--;
@@ -47,8 +47,8 @@ if(prevBtn && nextBtn) {
         images[i].className = 'shown';
     }
 
-    prevBtn.addEventListener('click', prevImg);
-    nextBtn.addEventListener('click', nextImg);
+    myPrevBtn.addEventListener('click', prevImg);
+    myNextBtn.addEventListener('click', nextImg);
 }
 
 // auto change gallery
