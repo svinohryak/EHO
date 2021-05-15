@@ -164,7 +164,7 @@ ul li:first-child a, ul li:last-child a {
 }
 
 .section__content {
-    background-color: black;
+    /* background-color: black; */
     width: 85%;
     margin: 0 auto;
 }
@@ -266,9 +266,12 @@ ul li:first-child a, ul li:last-child a {
     position: relative;
 
 }
+
 .photo {
     
     /* height: calc(100vh - 8rem); */
+    padding-bottom: 3rem;
+    margin-top: 2rem;
 
 }
 .photo-gallery {
@@ -416,6 +419,31 @@ ul li:first-child a, ul li:last-child a {
 }
 
 
+/* PHOTO PAGE */
+
+/* .photo-box {
+    display: flex;
+    flex-flow: row wrap;
+} */
+
+.photo-box {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: center;
+}
+
+.photo-box > a > img {
+    width: 100%;
+    padding: 5px;
+    transition: ease-in-out 500ms;
+}
+
+.photo-box > a > img:hover, .photo-box > a > img:active {
+    transform: scale(1.05);
+    filter: grayscale(50%);
+}
+
 @media screen and (max-width: 1200px) {
     .main {
         background-color: black;
@@ -466,6 +494,10 @@ ul li:first-child a, ul li:last-child a {
     }
     .section__title {
         justify-content: space-around;
+    }
+
+    .photo-box {
+        grid-template-columns: repeat(3, 33%);
     }
 }
 
@@ -550,6 +582,10 @@ ul li:first-child a, ul li:last-child a {
     }
     .content {
         background-color: black;
+    }
+
+    .photo-box {
+        grid-template-columns: repeat(2, 50%);
     }
 
     /* burger menu */
